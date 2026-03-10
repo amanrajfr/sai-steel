@@ -27,7 +27,7 @@ function JsonLd() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "22",
+      "reviewCount": "1100",
       "bestRating": "5"
     },
     "hasMap": "https://maps.app.goo.gl/eQfLDK2rRRKDciEV7",
@@ -57,7 +57,7 @@ const BUSINESS = {
   address: 'Ashiana Road, opposite Tarumitra Ashram, near May Flower School, Rajeev Nagar, Digha Ghat, Patna, Bihar 800011',
   mapsLink: 'https://maps.app.goo.gl/eQfLDK2rRRKDciEV7',
   rating: 5.0,
-  reviewCount: 22,
+  reviewCount: '1100+',
   category: 'Steel Distributor · Hardware Accessories',
   hours: {
     open: '9:00 AM',
@@ -77,10 +77,17 @@ const PRODUCTS = [
   },
   {
     img: '/assets/staircase-railing.png',
-    name: 'Staircases & Railings',
+    name: 'Stainless Steel Railings',
     badge: 'Popular Choice',
-    desc: 'Sleek stainless steel staircase railings and balcony guards fabricated with precision. Adds elegance and safety to homes and offices.',
+    desc: 'Sleek stainless steel railings and balcony guards fabricated with precision. Adds elegance and safety to homes and offices.',
     tags: ['Residential & Commercial', 'Custom Designs', 'SS Finish'],
+  },
+  {
+    icon: '🪜',
+    name: 'Stainless Steel Balusters',
+    badge: 'Premium',
+    desc: 'High-quality stainless steel balusters for elegant and secure staircase and balcony railings.',
+    tags: ['SS Finish', 'Durable', 'Elegant Designs'],
   },
   {
     img: '/assets/steel-door.png',
@@ -91,9 +98,9 @@ const PRODUCTS = [
   },
   {
     img: '/assets/decorative-pillars.jpg',
-    name: 'Decorative Steel Pillars',
+    name: 'Master Pillars',
     badge: 'Architectural',
-    desc: 'Ornate stainless steel gate posts and decorative pillars — mirrored finish on top, wood-tone panels below. Transforms any entrance.',
+    desc: 'Ornate stainless steel gate posts and master pillars — mirrored finish on top, wood-tone panels below. Transforms any entrance.',
     tags: ['Gate Pillars', 'Mirror Polished', 'Custom Patterns'],
   },
   {
@@ -179,7 +186,7 @@ const REVIEWS = [
 
 const STATS = [
   { value: '5.0★', label: 'Google Rating', icon: Star },
-  { value: '22+', label: 'Happy Customers', icon: ThumbsUp },
+  { value: '1100+', label: 'Happy Customers', icon: ThumbsUp },
   { value: '100%', label: 'Satisfaction Rate', icon: Award },
   { value: '7', label: 'Days a Week Open', icon: Clock },
 ]
@@ -191,10 +198,10 @@ const TICKER_ITEMS = [
   '🔧 Hardware Fittings & Accessories',
   '🏗️ Structural Steel for Construction',
   '🪟 Custom Steel Doors & Security Grills',
-  '🏛️ Decorative Steel Pillars & Gate Posts',
-  '🪜 Stainless Steel Staircases & Railings',
+  '🏛️ Master Pillars & Gate Posts',
+  '🪜 Stainless Steel Railings',
   '📞 Call Now: 070708 10247',
-  '⭐ 5-Star Rated on Google — 22 Reviews',
+  '⭐ 5-Star Rated on Google — 1100+ Reviews',
   '🕘 Open 9:00 AM – 7:30 PM, Mon–Sun',
 ]
 
@@ -386,7 +393,7 @@ function Hero() {
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg">5.0</div>
-                  <div className="text-steel-400 text-xs">22 Google Reviews</div>
+                  <div className="text-steel-400 text-xs">1100+ Google Reviews</div>
                 </div>
               </div>
               <div className="glass rounded-2xl px-5 py-3 flex items-center gap-3">
@@ -436,17 +443,17 @@ function Hero() {
             {/* Mini product grid below */}
             <div className="grid grid-cols-2 gap-4 w-full max-w-md">
               <div className="glass rounded-2xl overflow-hidden group cursor-pointer hover:border-accent-500/30 border border-white/5 transition-all">
-                <img src="/assets/staircase-railing.png" alt="SS Staircase Railing" className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/assets/staircase-railing.png" alt="Stainless Steel Railings" className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="px-3 py-2">
-                  <div className="text-white text-xs font-bold">Staircases</div>
-                  <div className="text-steel-400 text-xs">SS Railings</div>
+                  <div className="text-white text-xs font-bold">SS Railings</div>
+                  <div className="text-steel-400 text-xs">Stainless Steel</div>
                 </div>
               </div>
               <div className="glass rounded-2xl overflow-hidden group cursor-pointer hover:border-accent-500/30 border border-white/5 transition-all">
-                <img src="/assets/decorative-pillars.jpg" alt="Decorative Steel Pillars" className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500" />
+                <img src="/assets/decorative-pillars.jpg" alt="Master Pillars" className="w-full h-24 object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="px-3 py-2">
                   <div className="text-white text-xs font-bold">Gate Pillars</div>
-                  <div className="text-steel-400 text-xs">Decorative Steel</div>
+                  <div className="text-steel-400 text-xs">Master Pillars</div>
                 </div>
               </div>
             </div>
@@ -527,8 +534,8 @@ function About() {
             </h2>
             <p className="text-steel-300 text-base leading-relaxed mb-6 animate-on-scroll delay-200">
               <strong className="text-white">Sai Steel and Engineering Works</strong> is Patna's premier destination
-              for high-quality Jindal certified stainless steel pipes, hollow sections, decorative pillars,
-              staircases, steel doors, raw material pipes, and complete hardware accessories. We have built
+              for high-quality Jindal certified stainless steel pipes, hollow sections, master pillars,
+              stainless steel railings, steel doors, raw material pipes, and complete hardware accessories. We have built
               our reputation on trust, quality, and a genuine commitment to helping every customer succeed —
               from homeowners to large contractors.
             </p>
@@ -620,7 +627,7 @@ function Products() {
             Complete Steel <span className="gradient-text">Solutions</span>
           </h2>
           <p className="text-steel-400 text-base sm:text-lg max-w-2xl mx-auto animate-on-scroll delay-200">
-            From Jindal certified pipes to decorative pillars, staircase railings, and steel doors — everything your project needs under one roof.
+            From Jindal certified pipes to master pillars, stainless steel railings, and steel doors — everything your project needs under one roof.
           </p>
         </div>
 
@@ -743,7 +750,7 @@ function Reviews() {
               <p className="text-steel-300 text-sm leading-relaxed italic">"{r.text}"</p>
               <div className="mt-4 flex items-center gap-2 text-steel-500 text-xs">
                 <Star size={11} className="fill-yellow-400 text-yellow-400" />
-                <span>Posted on Google Maps</span>
+                <span>Verified by Google</span>
               </div>
             </div>
           ))}
@@ -935,11 +942,11 @@ function Footer() {
               </div>
             </div>
             <p className="text-steel-400 text-sm leading-relaxed max-w-sm">
-              Patna's most trusted dealer for Jindal quality stainless steel pipes, hollow sections, decorative pillars, staircases, steel doors, and hardware accessories.
+              Patna's most trusted dealer for Jindal quality stainless steel pipes, hollow sections, master pillars, stainless steel railings, steel doors, and hardware accessories.
             </p>
             <div className="flex items-center gap-2 mt-4">
               <Stars rating={5} />
-              <span className="text-steel-400 text-xs ml-1">5.0 · 22 Google Reviews</span>
+              <span className="text-steel-400 text-xs ml-1">5.0 · 1100+ Google Reviews</span>
             </div>
           </div>
 
@@ -953,9 +960,9 @@ function Footer() {
                 'ERW / MS Raw Pipes',
                 'Structural Steel',
                 'Hardware Fittings',
-                'Staircase Railings',
+                'Stainless Steel Railings',
                 'Steel Doors',
-                'Decorative Pillars',
+                'Master Pillars',
               ].map(p => (
                 <li key={p}>
                   <a href="#products" className="text-steel-400 text-sm hover:text-accent-400 transition-colors">{p}</a>
@@ -1013,8 +1020,8 @@ export default function App() {
         <Hero />
         <Ticker />
         <StatsSection />
-        <About />
         <Products />
+        <About />
         <Reviews />
         <HoursAndLocation />
         <Contact />

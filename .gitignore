@@ -31,3 +31,5 @@ Thumbs.db
 # Temp files
 setup-assets.cjs
 copy-images.bat
+
+.vercel
