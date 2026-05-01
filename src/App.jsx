@@ -27,7 +27,7 @@ function JsonLd() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "1100",
+      "reviewCount": "22",
       "bestRating": "5"
     },
     "hasMap": "https://maps.app.goo.gl/eQfLDK2rRRKDciEV7",
@@ -57,7 +57,8 @@ const BUSINESS = {
   address: 'Ashiana Road, opposite Tarumitra Ashram, near May Flower School, Rajeev Nagar, Digha Ghat, Patna, Bihar 800011',
   mapsLink: 'https://maps.app.goo.gl/eQfLDK2rRRKDciEV7',
   rating: 5.0,
-  reviewCount: '1100+',
+  reviewCount: '22+',
+  customerCount: '1100+',
   category: 'Steel Distributor · Hardware Accessories',
   hours: {
     open: '9:00 AM',
@@ -77,17 +78,10 @@ const PRODUCTS = [
   },
   {
     img: '/assets/staircase-railing.png',
-    name: 'Stainless Steel Railings',
+    name: 'Stainless Steel Railings & Balusters',
     badge: 'Popular Choice',
-    desc: 'Sleek stainless steel railings and balcony guards fabricated with precision. Adds elegance and safety to homes and offices.',
+    desc: 'Sleek stainless steel railings, balcony guards, and premium balusters fabricated with precision for elegant and secure homes and offices.',
     tags: ['Residential & Commercial', 'Custom Designs', 'SS Finish'],
-  },
-  {
-    icon: '🪜',
-    name: 'Stainless Steel Balusters',
-    badge: 'Premium',
-    desc: 'High-quality stainless steel balusters for elegant and secure staircase and balcony railings.',
-    tags: ['SS Finish', 'Durable', 'Elegant Designs'],
   },
   {
     img: '/assets/steel-door.png',
@@ -201,7 +195,7 @@ const TICKER_ITEMS = [
   '🏛️ Master Pillars & Gate Posts',
   '🪜 Stainless Steel Railings',
   '📞 Call Now: 070708 10247',
-  '⭐ 5-Star Rated on Google — 1100+ Reviews',
+  '⭐ 5-Star Rated on Google — 1100+ Happy Customers',
   '🕘 Open 9:00 AM – 7:30 PM, Mon–Sun',
 ]
 
@@ -262,7 +256,7 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-steel-950/95 backdrop-blur-md shadow-lg shadow-black/40 border-b border-white/5' : 'bg-transparent'}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled || open ? 'bg-steel-950/98 backdrop-blur-md shadow-lg shadow-black/40 border-b border-white/5' : 'bg-transparent'}`}
       role="banner"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -393,7 +387,7 @@ function Hero() {
                 </div>
                 <div>
                   <div className="text-white font-bold text-lg">5.0</div>
-                  <div className="text-steel-400 text-xs">1100+ Google Reviews</div>
+                  <div className="text-steel-400 text-xs">1100+ Happy Customers</div>
                 </div>
               </div>
               <div className="glass rounded-2xl px-5 py-3 flex items-center gap-3">
@@ -713,7 +707,7 @@ function Reviews() {
             <div className="flex flex-col items-center">
               <div className="text-5xl font-display font-black text-white">{BUSINESS.rating}</div>
               <Stars rating={5} />
-              <div className="text-steel-400 text-xs mt-1">{BUSINESS.reviewCount} Reviews</div>
+              <div className="text-steel-400 text-xs mt-1">{BUSINESS.customerCount} Happy Customers ({BUSINESS.reviewCount} Reviews)</div>
             </div>
             <div className="w-px h-16 bg-white/10" />
             <div className="text-left">

@@ -8,7 +8,7 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
-                display: ['Rajdhani', 'Inter', 'sans-serif'],
+                display: ['Montserrat', 'Inter', 'sans-serif'],
             },
             colors: {
                 steel: {
